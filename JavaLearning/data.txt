@@ -1,0 +1,9 @@
+this
+textfile
+is
+so funny
+and 
+trying
+to 
+read
+file
