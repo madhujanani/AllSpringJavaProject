@@ -13,38 +13,7 @@
 <title>home jsp first file</title>
 </head>
 <body>
-<!--  <%String name =(String)request.getAttribute("name"); %><!-- scriptlet -->
-<h1>hello <%=name%>  ${passww}from  home jsp</h1><!-- Expression -->
-<!-- <%List <UserCredentials>useList =(ArrayList<UserCredentials>) request.getAttribute("Users"); %> -->
-<table>
-<tr>
-	<th>ID</th>
-	<th>Name</th>
-	<th>Password</th>
-</tr>
-
-<c:forEach items ="${Users}" var = "user">
-<tr>
-	<td><c:out value ="${ user.getId()}"/></td>
-	<td><c:out value ="${user.getUserName()}"/></td>
-	<td><c:out value ="${user.getPassword()}"/></td>
-	
-	</tr>
-</c:forEach>
-<!--  
-<%
- for(UserCredentials user:useList){%>
-		<tr>
-		<td><%=user.getPassword() %></td> 
-		  <td><%=user.getUserName() %></td> 
-		<td><%=user.getId() %></td> 		
-		</tr>
-
-   <% } %>
-   -->
-
-</table>
-
+<h1>hello right password</h1>
 
 
 </body>

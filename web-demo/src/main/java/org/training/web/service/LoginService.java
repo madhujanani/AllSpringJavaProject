@@ -15,10 +15,10 @@ import org.training.web.dao.UserCredentialsDAO;
 import org.training.web.model.UserCredentials;
 @Service
 public class LoginService  { 
-//	ApplicationContext cont = new AnnotationConfigApplicationContext(AppConfigWeb.class);
-//	UserCredentialsDAO proDao = cont.getBean((UserCredentialsDAO.class));
-	@Autowired
-	UserCredentialsDAO proDao;
+	ApplicationContext cont = new AnnotationConfigApplicationContext(AppConfigWeb.class);
+	UserCredentialsDAO proDao = cont.getBean((UserCredentialsDAO.class));
+//	@Autowired
+//	UserCredentialsDAO proDao;
 	public boolean isValidUser(String username,String password) {
 	
 		 List<UserCredentials> usercreds = proDao.getAllUsers();
@@ -28,10 +28,8 @@ public class LoginService  {
 	    		 return true;
 			}	     
 	     }
- 
-		return false;
-
-		
+	   ((AbstractApplicationContext) cont).close();
+		return false;		
 	}
 	
 }
